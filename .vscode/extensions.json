@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "rust-lang.rust-analyzer",      // Rust 语言支持（必装）
+    "tamasfe.even-better-toml",     // TOML 语法高亮（Cargo.toml）
+    "serayuzgur.crates",            // Cargo.toml 依赖版本提示
+    "vadimcn.vscode-lldb"           // Rust 调试器
+  ]
+}
+

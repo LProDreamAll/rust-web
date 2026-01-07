@@ -19,3 +19,51 @@ target
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+# Rust 编译输出
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo 生成文件
+Cargo.lock
+
+# IDE / 编辑器
+# VSCode
+
+# IntelliJ IDEA / CLion
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.swp
+*.swo
+*~
+
+# 测试覆盖率
+tarpaulin-report.html
+cobertura.xml
+
+# 基准测试结果
+/bench_results/
+
+# 环境配置
+.env
+.env.local
+

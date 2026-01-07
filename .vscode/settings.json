@@ -1,0 +1,46 @@
+{
+  // Rust Analyzer 配置
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.procMacro.enable": true,
+  
+  // TOML 文件格式化
+  "files.associations": {
+    "*.toml": "toml",
+    "Cargo.lock": "toml"
+  },
+  
+  // 编辑器配置
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  
+  // Rust 文件配置
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  
+  // TOML 文件配置
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true
+  },
+  
+  // 文件监视排除（提升性能）
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/target/**": true,
+    "**/node_modules/**": true
+  },
+  
+  // 搜索排除（提升性能）
+  "search.exclude": {
+    "**/target": true,
+    "**/.git": true,
+    "**/Cargo.lock": true
+  }
+}
+

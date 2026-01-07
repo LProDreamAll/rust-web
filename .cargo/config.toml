@@ -1,0 +1,26 @@
+[net]
+# 在国内网络环境下，遇到 git/index 或网络抖动时更稳
+retry = 2
+git-fetch-with-cli = true
+
+# 默认使用国内镜像（rsproxy）。如果你这边 rsproxy 不通，看下面“切回官方源”。
+[source.crates-io]
+replace-with = "rsproxy"
+
+[source.rsproxy]
+# 稀疏索引（推荐，速度快，流量更小）
+registry = "sparse+https://rsproxy.cn/index/"
+
+# -----------------------------
+# 备用镜像（需要时手动切换）
+# 1) 把上面 replace-with 改成 "tuna"
+# 2) 取消下面两行注释
+#
+# [source.tuna]
+# registry = "sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/"
+#
+# -----------------------------
+# 切回官方源（如果镜像下载不了）
+# 直接把 [source.crates-io] 这一段删掉/注释掉即可（不 replace-with）
+
+
